@@ -55,6 +55,8 @@ t.equal(parsed.USERNAME, 'therealnerdybeast@example.tld', 'parses email addresse
 
 t.equal(parsed.SPACED_KEY, 'parsed', 'parses keys and values surrounded by spaces')
 
+t.deepEqual(parsed.ARRAY, ['   value 1', 'value 2'], 'parses array to comma seperated string')
+
 const payload = dotenv.parse(Buffer.from('BUFFER=true'))
 t.equal(payload.BUFFER, 'true', 'should parse a buffer into an object')
 
